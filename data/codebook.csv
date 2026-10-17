@@ -1,0 +1,13 @@
+Field,Definition,Unit/Scale,Role
+Movie,Movie title,text,Matched title
+Year,Release year,year,TMDB/Hollywood match key
+Genre,Hollywood genre,category,Context control
+ReleaseMonth,Release month (1-12),integer,Context control
+Season,Derived release season,category,Website exploration variable
+Rating,TMDB vote_average,0-10,Original predictor
+Popularity,TMDB popularity score,TMDB index,Original predictor
+TheatersOpenWeek,Opening-week theater count,theaters,Original predictor / RQ3 focus
+Budget,Production budget,million USD,Upstream control
+OpeningWeekend,Opening-weekend domestic gross,million USD,Early outcome
+LaterRevenue,DomesticGross - OpeningWeekend,million USD,Later-stage outcome
+DomesticGross,Total domestic gross,million USD,Main outcome
