@@ -14,6 +14,11 @@ LOCAL = Path("data/matched302.csv")
 def load_frozen_sample():
     if LOCAL.exists():
         df = pd.read_csv(LOCAL)
+        # Accept either the original packaged field names or the presentation-friendly names.
+        df = df.rename(columns={
+            "vote_average":"Rating", "popularity":"Popularity",
+            "release_month":"ReleaseMonth"
+        })
     else:
         import requests
         html = requests.get(SITE, timeout=30).text
